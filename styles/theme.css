@@ -69,7 +69,7 @@ body {
     border: 5px solid white;
 }
 
-@media (pointer: none) {
+@media (pointer: coarse) {
     .cursor {
         display: none;
     }
