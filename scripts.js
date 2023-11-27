@@ -1,6 +1,8 @@
 const navItems = document.getElementsByClassName('navbar-item');
 const cursor = document.querySelector('.cursor');
 
+
+
 function toggleNav() {
     for (let i = 0; i < navItems.length; i++) {
         navItems[i].classList.toggle('hidden');
@@ -18,3 +20,17 @@ document.addEventListener('mousemove', function(event) {
 });
 
 
+// Select all links in the document
+const links = document.querySelectorAll('a, button');
+
+// Add event listeners to each link
+links.forEach(link => {
+    link.addEventListener('mouseover', function() {
+        const cursor = document.querySelector('.cursor');
+        cursor.classList.add('cursor-hover');
+    });
+
+    link.addEventListener('mouseout', function() {
+        cursor.classList.remove('cursor-hover');
+    });
+});
