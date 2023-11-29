@@ -18,7 +18,7 @@ document.addEventListener('mousemove', function(event) {
     cursor.animate({
         left: `${mouseX}px`,
         top: `${mouseY}px`
-    }, { duration: 250, fill: 'forwards', easing: 'ease-in-out' });
+    }, { duration: 100, fill: 'forwards', easing: 'ease-in-out' });
 });
 
 // Select all links and buttons in the document
