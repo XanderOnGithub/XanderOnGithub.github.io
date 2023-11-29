@@ -33,5 +33,5 @@ newTitle = "Xander Reyes | " + siteTitles[dayOfWeek];
 document.querySelector('meta[property="og:title"]').setAttribute('content', newTitle);
 
 // Set the og:image property to the imageUrl
-document.querySelector('meta[property="og:image"]').setAttribute('content', imageUrl);
+// document.querySelector('meta[property="og:image"]').setAttribute('content', imageUrl);
 
