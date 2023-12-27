@@ -35,7 +35,7 @@
 
     </head>
 
-    <body class="">
+    <body class="overflow-x-hidden">
 
         <!-- Used for getting the scroll to the very top of the page :) -->
         <section id="home" class="absolute"></section>
@@ -81,7 +81,7 @@
         <!-- Main Content -->
         <main class="h-screen flex flex-col mx-auto items-start pt-28">
 
-            <section class="w-screen h-96 lg:h-[40em] pb-10 flex flex-row justify-between">
+            <section id="hero" class="w-screen h-96 lg:h-[40em] pb-10 flex flex-row justify-between">
 
                 <!-- Text Container -->
                 <div class="flex flex-col text-left pt-16 pb-10 px-5 lg:pt-40 lg:pb-20 lg:px-28 text-white">
@@ -99,7 +99,52 @@
                 <div class="w-screen hero-bg h-96 lg:h-[40em]"></div>
             </section>
             
-            
+            <section id="services" class="w-screen pt-10 pb-32 text-center flex flex-col">
+
+                <h1 class="mx-auto text-4xl font-bold">Services</h1>
+
+                <div class="flex flex-col mx-auto justify-evenly w-full 2xl:flex-row">
+
+                    <div class="service-card-group flex flex-col w-full sm:flex-row ">
+
+                        <div class="service-card w-full flex flex-col items-center justify-center">
+                            <span class="text-8xl material-symbols-rounded primary-color text-shadow-transparent">grass</span>
+                            <h1 class="text-xl md:text-2xl font-semibold">Lawn Services</h1>
+                            <h2 class="w-1/2 text-md">Mowing, Fertilization, Aeration, Overseeding, and more...</h2>
+
+                        </div>
+
+                        <div class="service-card w-full flex-col flex items-center justify-center">
+                            <span class="text-8xl material-symbols-rounded primary-color text-shadow-transparent">nature</span>
+                            <h1 class="text-xl md:text-2xl font-semibold">Shrubs</h1>
+                            <h2 class="w-1/2 text-md">Installation, Removal, Trimming</h2>
+
+                        </div>
+
+                    </div>
+
+                    <div class="service-card-group flex flex-col w-full sm:flex-row ">
+
+                    <div class="service-card w-full flex flex-col items-center justify-center">
+                        <span class="text-8xl material-symbols-rounded primary-color text-shadow-transparent">construction</span>
+                        <h1 class="text-xl md:text-2xl font-semibold">Hardscapes</h1>
+                        <h2 class="w-1/2 text-md">Walls, Patios, Landscape Design, and more...</h2>
+
+                    </div>
+
+                    <div class="service-card w-full flex flex-col items-center justify-center">
+
+                        <span class="text-8xl material-symbols-rounded primary-color text-shadow-transparent">eco</span>
+                        <h1 class="text-xl md:text-2xl font-semibold">Fall & Winter Services</h1>
+                        <h2 class="w-1/2 text-md">Leaf Removal, Plowing, Salting, everything from driveways to lots!</h2>
+
+                    </div> 
+
+                </div>
+
+                </div>
+
+            </section>
 
 
         </main>
