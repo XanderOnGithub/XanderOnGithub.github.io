@@ -1,98 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <!-- Meta-tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Meta-Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:title" content="Xander Reyes - Computer Science Student" />
-    <meta property="og:description" content="Creating projects to change the world, one day at a time." />
-    <meta property="og:site_name" content="xndr.live">
-    <meta property="og:image" content="https://xndr.live/Images/XNDR.png" />
-    <meta property="og:url" content="https://xndr.live/" />
+        <!-- Site Title -->
+        <title>Beeker's Lawn and Landscaping</title>
 
-    <!-- Page Title -->
-    <title>Home | Xander</title>
+        <!-- Link Stuff -->
+        <meta property="og:title" content="Beeker's Lawn and Landscaping" />
+        <meta property="og:description" content="Professional landscaping located in Ohio." />
+        <meta property="og:site_name" content="beekerslawn.com">
+        <meta property="og:image" content="https://beekerslawn.com/Images/Logo.webp" />
+        <meta property="og:url" content="https://beekerslawn.com/" />
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="Images/Icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Images/Icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Images/Icon/favicon-16x16.png">
+        <link rel="manifest" href="Images/Icon/site.webmanifest">
 
-    <!-- Stylesheets -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles/theme.css">
-    <link rel="stylesheet" href="styles/nav.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
-    
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+        <!-- Styles -->
+        <link rel="stylesheet" href="Styles/styles.css">
 
-</head>
 
-<body>
+    </head>
 
-    <div class="cursor"></div>
+    <body class="">
 
-    <!-- Navbar -->
-    <nav class="navbar container flex mx-auto my-7 items-end flex-col lg:items-center lg:justify-evenly lg:flex-row">
-        
-        <!-- Mobile Only Content (Left Image, Hamburger)-->
-        <div class="w-full px-12 flex justify-between  lg:hidden">
-            <a href="index.html"><img class="w-20 navbar-logo" src="Images/XNDR.png" alt="Logo"></a>
-            <button onclick="toggleNav()"><span class="material-symbols-outlined text-3xl">menu</span></button>
-        </div>
+        <!-- Navbar w Dropdown -->
+        <div class="navbar-container fixed w-full top-0 z-10">
 
-        <!-- Left Side Links (Mobile Top) -->
-        <div class="navbar-left flex flex-col text-right lg:flex-row lg:text-center">
-            <a class="navbar-item hidden font-semibold text-xl mx-12 my-3 lg:mx-20 lg:block" href="#">About</a>
-            <a class="navbar-item hidden font-semibold text-xl mx-12 my-3 lg:mx-20 lg:block" href="BeekersLawn/index.html">Projects</a>
-        </div>
+            <!-- Navbar -->
+            <nav class="py-5 bg-white border-b-4 border-primary-color sticky">
+                <div class="container mx-auto flex items-center justify-between">
 
-        <!-- Centered Logo (Desktop Logo) -->
-        <a href="index.html" class="navbar-center hidden lg:block"><img class="w-20 navbar-logo" src="Images/XNDR.png" alt="Logo"></a>
+                    <!-- Logo -->
+                    <div>
+                        <a href="#home"><img src="Images/Logo.webp" alt="Logo" class="px-10 h-20 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"></a>
+                    </div>
+            
+                    <!-- Links -->
+                    <div class="hidden lg:block text-center mx-auto space-x-12 text-xl font-semibold max-w-fit">
+                        <a href="#home" class="nav-scroll-link nav-link text-grey-600">Home</a>
+                        <a href="#services" class="nav-scroll-link nav-link text-grey-600">Services</a>
+                        <a href="#about" class="nav-scroll-link nav-link text-grey-600">About</a>
+                    </div>
 
-        <!-- Right Side Links (Mobile Bottom) -->
-        <div class="navbar-right flex flex-col text-right lg:flex-row lg:text-center">
-            <a class="navbar-item hidden font-semibold text-xl mx-12 my-3 lg:mx-20 lg:block" href="#">Work</a>
-            <a class="navbar-item hidden font-semibold text-xl mx-12 my-3 lg:mx-20 lg:block" href="#">Contact</a>
-        </div>
+                    <!-- Button -->
+                    <div class="px-10 text-center text-xl font-semibold max-w-fit ">
+                        <a href="#contact" class="button hidden lg:block text-white px-4 py-2 bg-accent-color rounded">Contact</a>
+                        <button class="block lg:hidden" onclick="toggleDropdown()"><span class="material-symbols-rounded text-5xl accent-color" id="dropdown-button">menu</span></button>        
+                    </div>
+                    
+                </div>
 
-    </nav>
+            </nav>
 
-    <!-- Main Content -->
-    <main class="w-full mx-auto text-center flex flex-col">
-
-        <section class="flex justify-between items-center flex-col my-24 lg:my-24 lg:flex-row">
-           
-            <div id="quoteBox" class="text-center px-5 mx-auto mb-16 my-6 lg:mb-0 lg:my-24">
-                <h1 id="Quoteline1" class="text-2xl my-3 lg:text-4xl"></h1> 
-                <h1 id="Quoteline2" class="text-2xl my-3 lg:text-4xl"></h1> 
-                <h1 id="QuoteAuthor" class="text-xl my-3 lg:text-2xl"></h1> 
-
+            <!-- Dropdown -->
+            <div class="bg-white text-gray-600 rounded dropdown sticky flex flex-col float-right text-right mx-5 px-6 py-3 my-3 text-xl font-semibold lg:hidden">
+                <a href="#home" class="nav-scroll-link dropdown-item my-2 active">Home</a>
+                <a href="#services" class="nav-scroll-link dropdown-item my-2">Services</a>
+                <a href="#about" class="nav-scroll-link dropdown-item my-2">About</a>
+                <a href="#contact" class="nav-scroll-link dropdown-item my-2">Contact</a>
             </div>
-        
-            <!-- <div class="text-right px-5 mx-auto mb-16 lg:mb-0 lg:mx-0 lg:mr-96">
-                <img src="Images/me.png" class="hero-portrait aspect-square w-72 h-72 rounded-xl object-cover border-white border-2"></img>
-            </div>            -->
-        
-        </section>
-        
-        
-    </main>
-    
-    <script src="scripts/cursor.js"></script>
-    <script src="scripts/dropdown.js"></script>
-    <script src="scripts/quote.js"></script>
 
-    
-</body>
 
+        </div> 
+    
+
+        <!-- Main Content -->
+        <main class="w-fit text-center h-full flex flex-col">
+
+            
+
+            <!-- Hero -->
+            <section id=home></section>
+            <section id="hero" class="w-screen w-min-full pt-[124px]">
+
+                <!-- Background (Determines Size of Container) -->
+                <div class="hero-bg h-96 lg:h-[40em]"></div>
+
+                <!-- Content Container for Logo on PC -->
+                <div class="flex flex-row justify-between">
+
+                    <!-- Vertical Hero Text Container-->
+                    <div class="flex flex-col text-left pt-20 ps-5 lg:pt-40 lg:ps-28 text-white">
+
+                        <h1 class="font-semibold text-shadow text-4xl lg:text-6xl">Beeker's Lawn and <br>Landscaping</h1>
+                        <h2 class="font-medium text-shadow-small text-lg pt-2 w-96 lg:text-2xl lg:pt-5 lg:w-auto lg:max-w-xl">Your Lawn Deserves the Best - Experience Superior Lawn Care and Landscaping Tailored to Your Needs!</h2>
+                        <a href="#contact" class="button px-4 py-2  max-w-[100px] lg:max-w-[120px] mt-5 lg:text-xl font-semibold bg-accent-color rounded text-center">Contact</a>
+
+                    </div>
+
+                    <!-- Logo Container -->
+                    <div class="h-96 lg:h-[40em] hidden sm:flex flex-col justify-center items-center lg:items-start sm:pe-10 md:pe-20 lg:pe-32 xl:pe-40 2xl:pe-64">
+                        <img src="Images/Logo.webp" alt="Logo" class="sm:scale-75 md:scale-90 lg:scale-100 xl:scale-105 2xl:scale-110">
+
+                    </div>
+
+            </section>
+
+            <!-- Services -->
+            <section id="services" class=" w-min-full pt-10">
+
+                <h1 class="mt-10 pt-10 text-4xl  font-semibold mx-auto w-full">Services</h1>
+
+                <div class="flex flex-col mx-auto justify-evenly w-full 2xl:flex-row">
+
+                    <div class="service-card-group flex flex-col w-full sm:flex-row">
+
+                        <div class="service-card w-full flex flex-col items-center justify-center">
+                            <span class="text-8xl material-symbols-rounded primary-color">grass</span>
+                            <h1 class="text-xl md:text-2xl font-semibold">Lawn Services</h1>
+                            <h2 class="w-1/2 text-md">Mowing, Fertilization, Aeration, Overseeding, and more...</h2>
+
+                        </div>
+
+                        <div class="service-card w-full flex-col flex items-center justify-center">
+                            <span class="text-8xl material-symbols-rounded primary-color">nature</span>
+                            <h1 class="text-xl md:text-2xl font-semibold">Shrubs</h1>
+                            <h2 class="w-1/2 text-md">Installation, Removal, Trimming</h2>
+
+                        </div>
+
+                    </div>
+
+                    <div class="service-card-group flex flex-col w-full sm:flex-row">
+
+                    <div class="service-card w-full flex flex-col items-center justify-center">
+                        <span class="text-8xl material-symbols-rounded primary-color">construction</span>
+                        <h1 class="text-xl md:text-2xl font-semibold">Hardscapes</h1>
+                        <h2 class="w-1/2 text-md">Walls, Patios, Landscape Design, and more...</h2>
+
+                    </div>
+
+                    <div class="service-card w-full flex flex-col items-center justify-center">
+
+                        <span class="text-8xl material-symbols-rounded primary-color">eco</span>
+                        <h1 class="text-xl md:text-2xl font-semibold">Fall & Winter Services</h1>
+                        <h2 class="w-1/2 text-md">Leaf Removal, Plowing, Salting, everything from driveways to lots!</h2>
+
+                    </div> 
+
+                </div>
+
+                </div>
+
+            </section>
+
+            <!-- About -->
+            <section id="about" class="w-min-full mt-10 pt-16 min-h-[45em]">
+
+
+                <div class="pt-10 flex flex-col w-full lg:flex-row mx-auto md:mx-0 lg:px-52 justify-between">
+
+                    <div class="flex flex-col">
+
+                        <h1 class=" text-center lg:text-left text-3xl font-semibold pb-5 mt-5 mx-auto lg:mx-0">Our Mission</h1>
+
+                        <h2 class="w-96 text-center lg:text-left text-xl font-medium mx-auto lg:mx-0">We are a family-owned business rooted in Fairfield, Ohio. We are a dedicated team of hardworking professionals who take immense pride in our craft. Our commitment to quality work is not just a business strategy, but a reflection of our values. We believe in transforming landscapes into beautiful, functional spaces, enhancing the beauty of our community one lawn at a time</h2>
+                    </div>
+
+
+                    <img class="about-image rounded shadow-sm h-[350px] mx-auto mt-10 lg:mt-0 lg:mx-0 lg:h-[500px]" src="Images/lawnmower.jpeg" alt="">
+
+                </div>
+
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="w-min-full mt-10 pt-10 m-h-[45em] pb-16  bg-zinc-100">
+
+                <h1 class="text-4xl font-semibold mx-auto w-full">Contact</h1>
+
+                <div class="flex flex-col lg:flex-row pt-10 lg:px-40 2xl:px-80 justify-between">
+
+                    <!-- Contact Form-->
+                    <div class="flex flex-col pt-10 w-fit mx-auto lg:mx-0">
+                       
+                        <div class="flex flex-col mx-auto lg:mx-0 lg:items-start">
+                            <form action="https://formspree.io/f/xyyrgkro" method="POST" class="flex flex-col">
+                                <label for="name" class="text-xl font-semibold text-left">Name:</label>
+                                <input type="text" name="name" id="name" placeholder="Enter your full name" class="border-2 border-black border-opacity-75 rounded w-96 h-10 mb-5">
+                    
+                                <label for="email" class="text-xl font-semibold text-left">Email:</label>
+                                <input type="email" name="email" id="email" placeholder="Enter your email address" class="border-2 border-black border-opacity-75 rounded w-96 h-10 mb-5">
+                    
+                                <label for="message" class="text-xl font-semibold text-left">Message:</label>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here" class="border-2 border-black border-opacity-75 rounded w-96 h-40 mb-5"></textarea>
+                                
+                                <button type="submit" style="background-color: #67156E;" onMouseOver="this.style.backgroundColor='#94189e'" onmouseout="this.style.backgroundColor='#67156E'" class=" block text-white px-4 py-2 rounded">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info-->
+                    <div class="flex flex-col pt-20 w-fit mx-auto lg:mx-0">
+                       
+                        <h2 class="text-xl font-medium w-96 text-center md:text-left mb-5 ">Should you require any assistance, feel free to reach out to us via phone call or email using our contact information.</h2>
+
+                        <h2 class="text-xl font-medium w-96 text-center md:text-left mb-5 ">Let me know your address, and I will return with a quote on the same day.</h2>
+
+
+                        <div class="flex flex-col mx-auto lg:mx-0 lg:items-start">
+                            <h1 class="text-2xl font-semibold">Phone Number: </h1>
+                            <h2 class="text-xl">(513) 293-1246</h2>
+                            <h1 class="text-2xl font-semibold pt-5">Email Address: </h1>
+                            <h2 class="text-lg">Beekerslawn@gmail.com</h2>
+
+                        </div>
+                    </div> 
+
+
+            </section>
+            
+
+        </main>
+
+        <script src="Scripts/dropdown.js"></script>
+        <script src="Scripts/navbarScroll.js"></script>
+
+    </body>
 </html>
-

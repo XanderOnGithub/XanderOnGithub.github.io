@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: #86B540;
+    --secondary: #677632;
+    --accent: #67156E;
+    --accent-hover: #94189e; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.primary-color {
+    color: var(--primary);
+}
+
+.bg-primary-color {
+    background-color: var(--primary);
+}
+
+.border-primary-color {
+    border-color: var(--primary);
+}
+
+.secondary-color {
+    color: var(--secondary);
+}
+
+.bg-secondary-color {
+    background-color: var(--secondary);
+}
+
+.border-secondary-color {
+    border-color: var(--secondary);
+}
+
+.accent-color {
+    color: var(--accent);
+}
+
+.bg-accent-color {
+    background-color: var(--accent);
+}
+
+.border-accent-color {
+    border-color: var(--accent);
+}
+
+/* Site Style */
+
+.nav-link {
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--secondary);
+}
+
+.nav-link.active {
+
+    border-bottom: 2px solid var(--primary);
+}
+
+.dropdown-item.active {
+    color: black;
+}
+
+.button {
+    background-color: var(--accent);
+
+}
+
+.button.bg-accent-color:hover {
+    background-color: var(--accent-hover);
+}
+
+.hero-bg {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    filter:brightness(75%);
+    background-image: url('../images/test-background.jpg');
+    transform: scaleX(-1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 1px rgba(0,0,0,1);
+}
+
+.text-shadow-small {
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+
+.service-card {
+    aspect-ratio: 1/0.75;
+}
+
+.dropdown-item.active {
+    color: var(--primary);
+}
+
+.about-image {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: fit-content
+}
+
+input::placeholder, textarea::placeholder {
+    opacity: 0.5;
+    padding: 5px;
+    font-weight: 500;
+  }
