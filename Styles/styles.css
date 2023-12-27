@@ -82,7 +82,6 @@ html {
 .hero-bg {
     z-index: -1;
     position: absolute;
-    width: 100%;
     filter:brightness(75%);
     background-image: url('../Images/test-background.jpg');
     transform: scaleX(-1);
