@@ -84,7 +84,7 @@ html {
     position: absolute;
     width: 100%;
     filter:brightness(75%);
-    background-image: url('../images/test-background.jpg');
+    background-image: url('/BeekersLawn/Images/test-background.jpg');
     transform: scaleX(-1);
     background-size: cover;
     background-position: center;
