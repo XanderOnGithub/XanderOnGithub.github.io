@@ -1,8 +1,7 @@
 // Select the cursor element
 const cursor = document.querySelector('.cursor');
 
-// Move the cursor with mouse movement
-document.addEventListener('mousemove', function(event) {
+function moveCursor() {
     let mouseX = event.clientX;
     let mouseY = event.clientY;
 
@@ -19,6 +18,11 @@ document.addEventListener('mousemove', function(event) {
         left: `${mouseX}px`,
         top: `${mouseY}px`
     }, { duration: 100, fill: 'forwards', easing: 'ease-in-out' });
+}
+
+// Move the cursor with mouse movement
+document.addEventListener('mousemove', function(event) {
+    moveCursor();
 });
 
 // Select all links and buttons in the document
