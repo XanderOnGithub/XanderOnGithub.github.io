@@ -23,7 +23,7 @@ function createObserver(threshold) {
 }
 
 function updateThreshold() {
-  const threshold = window.innerWidth < 900 ? 0.25 : 0.75;
+  const threshold = window.innerWidth < 900 ? 0.35 : 0.75;
   createObserver(threshold);
 }
 
