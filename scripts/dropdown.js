@@ -18,5 +18,3 @@ function toggleDropdown() {
         dropdownIcon.innerHTML = 'close';
     }
 }
-
-console.log("Working!")
