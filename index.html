@@ -35,7 +35,7 @@
 
     </head>
 
-    <body class="overflow-x-hidden">
+    <body class="">
 
         <!-- Used for getting the scroll to the very top of the page :) -->
         <section id="home" class="absolute"></section>
@@ -77,99 +77,110 @@
             </div>
 
         </div> 
-        
-        <!-- Main Content -->
-        <main class="h-screen flex flex-col mx-auto items-start pt-28">
 
-            <section id="home" class="w-screen h-96 lg:h-[40em] pb-10 flex flex-row justify-between">
+        <main class="min-w-screen min-h-screen flex flex-col items-start">
+
+            <!-- Home|Hero -->
+            <section id="home" class="w-full h-full mx-auto top-nav-padding flex flex-row justify-between">
 
                 <!-- Text Container -->
                 <div class="flex flex-col text-left pt-16 pb-10 px-5 lg:pt-40 lg:pb-20 lg:px-28 text-white">
                     <h1 class="font-semibold text-shadow text-4xl lg:text-6xl">Beeker's Lawn & <br>Landscaping</h1>
                     <h2 class="font-medium text-shadow-small max-w-md text-lg pt-2 lg:text-2xl lg:pt-5 w-auto lg:max-w-xl">Your Lawn Deserves the Best - Experience Superior Lawn Care and Landscaping Tailored to Your Needs!</h2>
-                    <a href="#contact" class="button px-4 py-2 max-w-[100px] lg:max-w-[120px] mt-5 lg:text-xl font-semibold bg-accent-color rounded text-center">Contact</a>
+                    <a href="#contact" class="button px-4 py-2 max-w-[100px] lg:max-w-[120px] mt-5 lg:text-xl font-semibold bg-accent-color rounded text-center shadow-md">Contact</a>
                 </div>
-            
+
                 <!-- Logo Container -->
                 <div class="h-96 lg:h-[40em] hidden sm:flex flex-col justify-center lg:items-start sm:pe-10 md:pe-20 lg:pe-32 xl:pe-40 2xl:pe-64">
                     <img src="Images/Logo.webp" alt="Logo" class="sm:scale-75 md:scale-90 lg:scale-100 xl:scale-105 2xl:scale-110">
                 </div>
-            
+
                 <!-- Background -->
-                <div class="w-screen hero-bg h-96 lg:h-[40em]"></div>
+                <div class="w-full hero-bg h-96 lg:h-[40em]"></div>
+
             </section>
 
-            <section id="services" class="w-screen pt-20 pb-10 text-center flex flex-col">
+            <!-- Services -->
+            <section id="services" class="w-full h-full mx-auto py-20 md:py-16">
 
-                <h1 class="mx-auto text-4xl font-bold">Services</h1>
+                <!-- Title -->
+                <div class="text-center pb-10 mx-auto px-10">
+                    <h1 class="text-4xl font-semibold pb-2">Services</h1>
+                    <h2 class="text-xl font-medium">We offer a wide variety of services to meet your needs.</h2>
+                </div>
 
-                <div class="flex flex-col mx-auto justify-evenly w-full 2xl:flex-row">
+                <!-- Service Cards -->
+                <div class="grid mx-10 my-5 grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-20">
 
-                    <div class="service-card-group flex flex-col w-full sm:flex-row ">
-
-                        <div class="service-card w-full flex flex-col items-center justify-center">
-                            <span class="text-8xl material-symbols-rounded primary-color text-shadow-transparent">grass</span>
-                            <h1 class="text-xl md:text-2xl font-semibold">Lawn & Garden Services</h1>
-                            <h2 class="w-1/2 text-md">Mowing, Fertilization, Aeration, Overseeding, and more...</h2>
-
-                        </div>
-
-                        <div class="service-card w-full flex-col flex items-center justify-center">
-                            <span class="text-8xl material-symbols-rounded primary-color text-shadow-transparent">nature</span>
-                            <h1 class="text-xl md:text-2xl font-semibold">Shrubs</h1>
-                            <h2 class="w-1/2 text-md">Installation, Removal, Trimming</h2>
-
-                        </div>
-
+                    <!-- Service Card 1 (Lawn & Garden Services)-->
+                    <div class="service-card aspect-square col-span-1 flex flex-col items-center justify-center p-8 rounded-xl shadow-lg text-center">
+                        <span class="text-8xl material-symbols-rounded primary-color text-shadow-transparent">grass</span>
+                        <h1 class="text-xl font-semibold pb-2 2xl:text-2xl">Lawn & Garden Services</h1>
+                        <h2 class="text-md 2xl:text-lg">Mowing, Fertilization, <br>Aeration, Overseeding, and more...</h2>
                     </div>
-
-                    <div class="service-card-group flex flex-col w-full sm:flex-row ">
-
-                    <div class="service-card w-full flex flex-col items-center justify-center">
+                
+                    <!-- Service Card 2 (Lawn & Garden Services)-->
+                    <div class="service-card aspect-square col-span-1 flex flex-col items-center justify-center p-8 rounded-xl shadow-lg text-center">
+                        <span class="text-8xl material-symbols-rounded primary-color text-shadow-transparent">nature</span>
+                        <h1 class="text-xl font-semibold pb-2 2xl:text-2xl">Shrubs</h1>
+                        <h2 class="text-md 2xl:text-lg">Installation, Removal, and Trimming<br> and more...</h2>
+                    </div>
+                
+                    <!-- Service Card 3 (Lawn & Garden Services)-->
+                    <div class="service-card aspect-square col-span-1 flex flex-col items-center justify-center p-8 rounded-xl shadow-lg text-center">
                         <span class="text-8xl material-symbols-rounded primary-color text-shadow-transparent">construction</span>
-                        <h1 class="text-xl md:text-2xl font-semibold">Hardscapes</h1>
-                        <h2 class="w-1/2 text-md">Walls, Patios, Landscape Design, and more...</h2>
-
+                        <h1 class="text-xl font-semibold pb-2 2xl:text-2xl">Hardscapes</h1>
+                        <h2 class="text-md 2xl:text-lg">Walls, Patios, Landscape <br> Design, and more...</h2>
                     </div>
-
-                    <div class="service-card w-full flex flex-col items-center justify-center">
-
+                
+                    <!-- Service Card 4 (Fall & Winter Services)-->
+                    <div class="service-card aspect-square col-span-1 flex flex-col items-center justify-center p-8 rounded-xl shadow-lg text-center">
                         <span class="text-8xl material-symbols-rounded primary-color text-shadow-transparent">eco</span>
-                        <h1 class="text-xl md:text-2xl font-semibold">Fall & Winter Services</h1>
-                        <h2 class="w-1/2 text-md">Leaf Removal, Plowing, Salting, everything from driveways to lots!</h2>
-
-                    </div> 
-
+                        <h1 class="text-xl font-semibold pb-2 2xl:text-2xl">Fall & Winter Services</h1>
+                        <h2 class="text-md 2xl:text-lg">Leaf Removal, Plowing, Salting,<br>everything from driveways to lots!</h2>
+                    </div>
+                
                 </div>
-
-                </div>
+                
+                
 
             </section>
 
-            <section id="about" class="w-screen pt-20 pb-10 mx-auto">
+            <!-- About -->
+            <section id="about" class="h-full mx-10 my-10 bg-zinc-100 rounded-xl shadow-lg">
 
-                <div class="pt-10 flex flex-col lg:flex-row mx-auto md:mx-0 lg:px-52 justify-between">
+                <!-- About Container -->
+                <div class="pt-10 flex flex-col 2xl:flex-row mx-auto 2xl:mx-0 lg:px-52 justify-between">
 
-                    <div class="flex flex-col ">
+                    <!-- Text Container -->
+                    <div class="flex flex-col mx-6 2xl:me-60 mb-10">
 
-                        <h1 class=" text-center lg:text-left text-3xl font-semibold pb-5 mt-5 mx-auto lg:mx-0">Our Mission</h1>
+                        <h1 class=" text-center 2xl:text-left text-3xl font-semibold pb-5 mt-5 mx-auto 2xl:mx-0">Our Mission</h1>
 
-                        <h2 class="px-5 md:px-0 w-2/3  md:w-64 lg:w-4/6 text-center lg:text-left text-lg font-medium mx-auto lg:mx-0">We are a family-owned business rooted in Fairfield, Ohio. We are a dedicated team of hardworking professionals who take immense pride in our craft. Our commitment to quality work is not just a business strategy, but a reflection of our values. We believe in transforming landscapes into beautiful, functional spaces, enhancing the beauty of our community one lawn at a time.</h2>
+                        <h2 class="px-5 md:px-0 text-center 2xl:text-left text-lg font-medium mx-auto 2xl:mx-0">Rooted in Fairfield, Ohio, our family-owned business thrives on transforming landscapes into stunning, functional spaces. Committed to quality, our team of dedicated professionals merges passion with craft, turning every project into a work of art. <br><br>With pride in our work and a commitment to enhancing our community, we strive to create captivating outdoor spaces that not only elevate aesthetics but also foster connections and memories. Let us bring our expertise to your landscape, crafting an oasis that reflects your vision and our dedication.</h2>
                     </div>
 
-
-                    <img class="about-image rounded shadow-sm h-[300px] mx-auto mt-10 lg:mt-0 lg:mx-0 lg:h-[500px]" src="Images/lawnmower.jpeg" alt="">
+                    <!-- Image -->
+                    <img class="hidden 2xl:block about-image rounded-xl shadow-lg h-[300px] mb-10 mx-auto mt-10 lg:mt-0 2xl:mx-0 lg:h-[400px]" src="Images/lawnmower.jpeg" alt="">
 
                 </div>
 
             </section>
 
-            <section id="contact" class="bg-zinc-100 w-screen pt-20 pb-10 mx-auto text-center flex flex-col lg:flex-col">
+            <!-- Contact -->
+            <section id="contact" class="h-full w-full mt-10 bg-zinc-100">
 
-                <h1 class="mx-auto text-4xl font-bold pb-5">Contact</h1>
+                <!-- Title -->
+                <div class="text-center pt-10 pb-10 mx-auto px-5">
+                    <h1 class="text-4xl font-semibold pb-2">Get in touch!</h1>
+                    <h2 class="text-xl font-medium">Whether you're seeking specialized solutions, unique offerings, <br>or comprehensive assistance, we've got you covered.</h2>
+                </div>
 
-                <div class=" px-5 lg:px-0 flex flex-col lg:flex-row lg:mx-64">
-                    <form action="https://formspree.io/f/xyyrgkro" method="POST" class="w-full lg:w-96 mx-auto lg:mx-10 bg-white rounded-lg shadow-lg p-10">
+                <!-- Contact Content -->
+
+                <div class="flex flex-col lg:flex-row mx-auto pb-10 justify-center">
+
+                    <form action="https://formspree.io/f/xyyrgkro" method="POST" class="mb-5 lg:mb-0 mx-10 lg:w-96 bg-white rounded-lg shadow-lg p-10">
                         <div class="mb-5 flex flex-col">
                             <label for="name" class="text-xl font-semibold self-start">Name*</label>
                             <input type="text" name="name" id="name" placeholder="Enter your full name" class="border-2 border-accent-color border-opacity-75 rounded w-full h-10 mt-1" required>
@@ -188,41 +199,53 @@
                         <button type="submit" style="background-color: #67156E;" onMouseOver="this.style.backgroundColor='#94189e'" onmouseout="this.style.backgroundColor='#67156E'" class="mx-auto block md:w-full text-white px-12 py-2 rounded">Submit</button>
                     </form>
 
+                    <div class="flex flex-col mx-10 lg:w-96 bg-white rounded-lg shadow-lg p-10">
+                        <div class="mb-5 flex flex-col">
+                            <div class="flex flex-col mb-5">
+                                <label for="name" class="text-2xl font-semibold self-start">Phone:</label>
+                                <a href="tel:513-939-8873" class="accent-color font-semibold">513-939-8873</a>
+                            </div>
 
-                    <div class="mx-auto mt-5 lg:mt-0 lg:mx-10 lg:ml-auto lg:w-96 bg-white rounded-lg shadow-lg p-10">
-                        
-                        <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
-                        <p class="mb-4"><strong>Email:</strong> Beekerslawn@gmail.com</p>
-                        <p class="mb-4"><strong>Phone:</strong> (513) 795-7734</p>
-                        <p><strong>Address:</strong> 900 Mosler Ave Unit A, <br>Hamilton, Ohio 45011</p>
-                    
-                        <hr class="mt-3">
+                            <div class="flex flex-col mb-5">
+                                <label for="name" class="text-2xl font-semibold self-start">Email:</label>
+                                <a class="accent-color font-semibold">Beekerslawn@gmail.com</a>
+                            </div>
 
-                        <h2 class="font-medium mt-3 w-2/3 mx-auto">Should you require any assistance, feel free to reach out to us via phone call or email using our contact information.</h2>
+                            <div class="flex flex-col mb-5">
+                                <label for="name" class="text-2xl font-semibold self-start">Address:</label>
+                                <a class="accent-color font-semibold"> 900 Mosler Ave Unit A, <br>Hamilton, Ohio 45011</a>
+                            </div>
 
-                        <h2 class="font-medium mt-3 w-2/3 mx-auto">Let me know your address, and I will return with a quote shortly.</h2>
-                        
+                            <hr class="mt-3">
 
+                            <div class="flex flex-col mb-5">
 
-                    </div>
-                    
+                                <h2 class="font-medium mt-3">Should you require any assistance, feel free to reach out to us via phone call or email using our contact information.</h2>
+
+                                <h2 class="font-medium mt-3">Let me know your address, and I will return with a quote shortly.</h2>
+
+                            </div>
+                            
+
+                        </div>
+            
+
 
 
                 </div>
-                
+
+
 
 
             </section>
 
-
-            <footer class="w-full h-full mx-auto pt-6 pb-6 border-t-4 border-primary-color flex flex-col justify-center items-center text-center">
+            <footer class="w-full h-full mx-auto pt-5 pb-5 border-t-4 border-primary-color flex flex-col justify-center items-center text-center">
                 <p class="max-w-md py-1 font-semibold">Copyright © 2023 Beeker's Lawn & Landscaping - All Rights Reserved.</p>
                 <a class="py-1 font-semibold accent-color" href="https://xndr.live/">Created by Xander Reyes</a>
               </footer>
 
         </main>
-
-
+        
         <script src="Scripts/dropdown.js"></script>
         <script src="Scripts/navbarScroll.js"></script>
         

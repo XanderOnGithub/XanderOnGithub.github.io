@@ -103,7 +103,10 @@ html {
 }
 
 .service-card {
-    aspect-ratio: 1/0.75;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    min-width: 250px;
+    min-height: 250px;
 }
 
 .dropdown-item.active {
@@ -121,3 +124,8 @@ input::placeholder, textarea::placeholder {
     padding: 5px;
     font-weight: 500;
   }
+
+
+.top-nav-padding {
+    padding-top: 7rem;
+}
